@@ -1,0 +1,22 @@
+#content {
+    padding: 2rem 3rem;
+    width: 100%;
+    background-color: var(--color-primary);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.content-wrapper {
+    margin-inline: auto;
+    width: var(--content-max-width);
+}
+
+.content-text p + p {
+    margin-top: var(--content-distance);
+}
+
+.title {
+    font-size: 2.5rem;
+}
