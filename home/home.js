@@ -34,7 +34,7 @@ const getQuerySelector = (function () {
             active_slide = 1;
         else
             active_slide++;
-        chapter_container.style.transform = `translateX(-${(active_slide - 1) * 100}%)`;
+        chapter_container.style.transform = `translateX(-${(active_slide - 1) * 25}%)`;
         setTimeout(() => {
             canStartNewAnimation = true;
         }, DURATION);
@@ -47,7 +47,7 @@ const getQuerySelector = (function () {
             active_slide = LAST_SLIDE;
         else
             active_slide--;
-        chapter_container.style.transform = `translateX(-${(active_slide - 1) * 100}%)`;
+        chapter_container.style.transform = `translateX(-${(active_slide - 1) * 25}%)`;
         setTimeout(() => {
             canStartNewAnimation = true;
         }, DURATION);

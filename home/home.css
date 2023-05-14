@@ -43,26 +43,15 @@ h2 {
 }
 
 #capitulos .chapter {
-    position: absolute;
+    position: relative;
     padding-top: 5rem;
-    height: 100%;
-}
-
-.chapter[data-index="2"] {
-    left: 100%;
-}
-
-.chapter[data-index="3"] {
-    left: 200%;
-}
-
-.chapter[data-index="4"] {
-    left: 300%;
 }
 
 .chapter-container {
-    min-height: 100vh;
+    min-height: min(100vh, 40rem);
     transition: transform cubic-bezier(.77,0,.18,1) var(--slide-duration);
+    display: flex;
+    width: 400%;
 }
 
 .chapter-wrapper {

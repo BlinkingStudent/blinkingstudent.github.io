@@ -52,9 +52,11 @@
 }
 
 .article {
-    background-color: var(--color-secondary);
     padding: 1rem 2rem;
     border-radius: .75rem;
+    background-color: var(--color-secondary);
+    background-size: cover;
+    background-position: center;
 }
 
 .previous-article {
