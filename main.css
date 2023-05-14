@@ -5,9 +5,9 @@
     --font-headline: 'Libre Bodoni', serif;
     --font-normal: 'PT Serif', serif;;
 
-    --color-text: #fff;
-    --color-secondary: #363642;
-    --color-primary: #555;
+    --color-text: #dfe7ee;
+    --color-primary: #272d2c;
+    --color-secondary: #394846;
 
     --content-max-width: min(100%, 40em);
     --content-distance: 1.5rem;
@@ -23,8 +23,23 @@ body {
 
     font-family: var(--font-normal);
 
-    overflow-x: hidden;
-    line-height: 1.3;
+    line-height: 1.5;
+}
+
+img,
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
 }
 
 #nav {
@@ -35,11 +50,8 @@ body {
     font-size: 1.1rem;
     font-family: var(--font-headline);
     line-height: 1.5rem;
-}
 
-#nav a {
-    color: var(--color-text);
-    text-decoration: none;
+    z-index: 100;
 }
 
 #nav > ul {
@@ -71,12 +83,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform .05s;
 }
 
-a.button,
-.button > a {
-    text-decoration: none;
-    color: var(--color-text);
-}
-
 .button:hover,
 .button:focus-within {
     filter: brightness(0.85);
@@ -91,4 +97,5 @@ a.button,
     background-color: var(--color-secondary);
     width: 100%;
     padding: 2rem 3rem;
+    text-align: center;
 }

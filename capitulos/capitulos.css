@@ -1,22 +1,104 @@
-#content {
-    padding: 2rem 3rem;
-    width: 100%;
-    background-color: var(--color-primary);
+/**********/
+/* Header */
+/**********/
+
+#header {
     background-size: cover;
-    display: flex;
-    align-items: center;
+    background-position: center;
+    padding: 3rem;
     padding-top: 5rem;
-}
-
-.content-wrapper {
-    margin-inline: auto;
-    width: var(--content-max-width);
-}
-
-.content-text p + p {
-    margin-top: var(--content-distance);
 }
 
 .title {
     font-size: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+/***********/
+/* Content */
+/***********/
+
+#content {
+    padding: 2rem 3rem;
+    padding-bottom: 5rem;
+    
+    width: 100%;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper {
+    font-size: 1.2rem;
+    margin-inline: auto;
+    width: var(--content-max-width);
+}
+
+.content-text {
+    margin-bottom: var(--content-distance);
+}
+
+.content-text > * + * {
+    margin-top: var(--content-distance);
+}
+
+/************/
+/* Articles */
+/************/
+
+.articles-wrapper {
+    display: grid;
+    gap: .5rem;
+}
+
+.article {
+    background-color: var(--color-secondary);
+    padding: 1rem 2rem;
+    border-radius: .75rem;
+}
+
+.previous-article {
+    border-radius: .75rem .75rem .25rem .25rem;
+}
+
+.next-article {
+    border-radius: .25rem .25rem .75rem .75rem;
+}
+
+@media screen and (min-width: 35rem) {
+    .articles-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .previous-article {
+        border-radius: .75rem .25rem .25rem .75rem;
+    }
+    
+    .next-article {
+        border-radius: .25rem .75rem .75rem .25rem;
+    }
+}
+
+.chapter-avatar {
+    display: flex;
+}
+
+.author-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.author-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.author-name {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    opacity: .8;
 }
