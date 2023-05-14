@@ -11,6 +11,8 @@
 
     --content-max-width: min(100%, 40em);
     --content-distance: 1.5rem;
+
+    font-size: min(3.5vw, 3vh, 16px);
 }
 
 *, ::after, ::before {
