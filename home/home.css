@@ -6,12 +6,6 @@ h2 {
     font-size: 2.5rem;
 }
 
-.subtitle {
-    margin-top: var(--content-distance);
-    text-align: center;
-    opacity: .6;
-}
-
 /*********************/
 /* Section: Chapters */
 /*********************/
@@ -27,14 +21,15 @@ h2 {
     right: 0;
     top: 0;
     bottom: 0;
+    color: var(--color-text);
+    background: unset;
+    border: unset;
+    cursor: pointer;
+    z-index: 200;
 }
 
 .forwards-button {
     left: unset;
-}
-
-.slider-button {
-    cursor: pointer;
 }
 
 #capitulos {
@@ -73,12 +68,35 @@ h2 {
 }
 
 .chapter-hero__img {
-    background-image: url(/static/Screenshot\ 1.png);
     background-position: center;
     background-size: cover;
 
     position: absolute;
     inset: 0;
+}
+
+.chapter-hero__img::after {
+    content: '';
+    background-color: #15171080;
+
+    position: absolute;
+    inset: 0;
+}
+
+[data-index="1"] .chapter-hero__img {
+    background-image: url(/static/Screenshot\ 1.png);
+}
+
+[data-index="2"] .chapter-hero__img {
+    background-image: url(/static/Screenshot\ 2.webp);
+}
+
+[data-index="3"] .chapter-hero__img {
+    background-image: url(/static/Screenshot\ 3.png);
+}
+
+[data-index="4"] .chapter-hero__img {
+    background-image: url(/static/Screenshot\ 4.png);
 }
 
 .chapter {
@@ -140,7 +158,6 @@ h2 {
     font-size: 1.25rem;
     display: flex;
     align-items: center;
-    opacity: .8;
 }
 
 .see-chapter {
