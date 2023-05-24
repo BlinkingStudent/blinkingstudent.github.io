@@ -84,7 +84,7 @@ h2 {
 }
 
 [data-index="1"] .chapter-hero__img {
-    background-image: url(/static/Screenshot\ 1.png);
+    background-image: url(/static/Screenshot\ 1.webp);
 }
 
 [data-index="2"] .chapter-hero__img {
@@ -92,11 +92,11 @@ h2 {
 }
 
 [data-index="3"] .chapter-hero__img {
-    background-image: url(/static/Screenshot\ 3.png);
+    background-image: url(/static/Screenshot\ 3.webp);
 }
 
 [data-index="4"] .chapter-hero__img {
-    background-image: url(/static/Screenshot\ 4.png);
+    background-image: url(/static/Screenshot\ 4.webp);
 }
 
 .chapter {
@@ -210,5 +210,99 @@ h2 {
 }
 
 .book-img > img {
-    height: min(40vw, 19rem);;
+    height: min(40vw, 19rem);
+    aspect-ratio: 278 / 400;
+}
+
+/********************/
+/* Section: Membros */
+/********************/
+
+#membros .chapter {
+    padding-block: 4rem;
+}
+
+#membros .chapter-hero__img {
+    background-image: url("/static/Nazi Germany.webp");
+}
+
+#membros .chapter > .chapter-hero__img-wrapper .chapter-hero__img::after {
+    background-color: #323c45bb;
+}
+
+#membros .members-info .chapter-hero__img {
+    background-image: url("/static/objetivo-vergueiro-desk.webp")
+}
+
+.title-info {
+    margin-block: auto;
+    height: fit-content;
+    grid-area: title-info;
+}
+
+.members-info {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.members-school {
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: var(--font-headline);
+    margin-bottom: .25rem;
+}
+
+.members-class {
+    font-size: 1.25rem;
+    opacity: .75;
+}
+
+.member-description {
+    opacity: .8;
+}
+
+#membros .chapter-avatar {
+    background: var(--color-primary);
+    padding: 1.25rem;
+    border-radius: 1rem;
+}
+
+#membros .chapter-title {
+    margin-bottom: 1rem;
+}
+
+#membros .chapter-avatar:not(:last-child) {
+    margin-bottom: .5rem;
+    border-radius: .25rem;
+}
+
+#membros .chapter-avatar:first-child {
+    border-radius: 1rem 1rem .25rem .25rem;
+}
+
+#membros .chapter-avatar:last-child {
+    border-radius: .25rem .25rem 1rem 1rem;
+}
+
+#membros .author-img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+#membros .author-name {
+    font-weight: 700;
+}
+
+#membros .chapter-wrapper {
+    grid-template-areas: 'title-info'
+                         'contributors';
+}
+
+@media screen and (min-width: 55rem) {
+    #membros .chapter-wrapper {
+        grid-template-areas: 'title-info contributors';
+        max-width: 60rem;
+    }
 }

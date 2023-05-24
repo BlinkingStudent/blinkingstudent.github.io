@@ -1,11 +1,11 @@
 /* The book cover's font */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Bodoni:700|PT+Serif:400,700&display=swap&subset=latin');
 
 :root {
     --font-headline: 'Libre Bodoni', serif;
     --font-normal: 'PT Serif', serif;;
 
-    --color-text: #dfe7ee;
+    --color-text: #eee6df;
     --color-primary: #272d2c;
     --color-secondary: #394846;
 
@@ -32,6 +32,7 @@ body {
     font-family: var(--font-normal);
 
     line-height: 1.5;
+    font-weight: 400;
 }
 
 img,
@@ -77,7 +78,15 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-headline);
-    font-weight: bold;
+    font-weight: 700;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+i, cite, em, var, dfn {
+    font-style: italic;
 }
 
 .button {

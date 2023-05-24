@@ -51,6 +51,34 @@
     margin-top: var(--content-distance);
 }
 
+.content-image-wrapper img {
+    width: 100%;
+}
+
+.content-image-wrapper {
+    margin-inline: auto;
+    width: fit-content;
+    margin-bottom: calc(var(--content-distance) / 2)
+}
+
+.content-image-caption {
+    width: 100%;
+    text-align: center;
+    opacity: .8;
+    font-size: 0.9em;
+    margin-inline: auto;
+}
+
+@media screen and (min-width: 40rem) {
+    .content-image-wrapper img {
+        width: unset;
+    }
+
+    .content-image-caption {
+        width: 30rem;
+    }
+}
+
 /************/
 /* Articles */
 /************/
