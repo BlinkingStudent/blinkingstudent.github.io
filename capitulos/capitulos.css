@@ -69,7 +69,36 @@
     margin-inline: auto;
 }
 
+.content-quote::before {
+    content: "\201C";
+    position: absolute;
+    left: 1rem;
+    top: -1rem;
+    font-size: 8rem;
+    opacity: .5;
+}
+
+.content-quote {
+    background-color: var(--color-secondary);
+    border-radius: 0 1rem 1rem 0;
+    padding: 6rem 1.5rem 1.5rem 1.5rem;
+    font-size: 1.75rem;
+    font-family: var(--font-headline);
+    position: relative;
+    border-left: .7rem #949793 solid;
+}
+
+.content-quote-author {
+    font-size: 1.375rem;
+    font-family: var(--font-normal);
+    opacity: .75;
+}
+
 @media screen and (min-width: 40rem) {
+    .content-quote {
+        padding: 1.5rem 1.5rem 1.5rem 7rem;
+    }
+
     .content-image-wrapper img {
         width: unset;
     }
